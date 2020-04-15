@@ -1,0 +1,35 @@
+{
+	"BlockDeviceMappings": [
+	  {
+		  "DeviceName": "/dev/xvda",
+		  "Ebs": {
+		  "Encrypted": false,
+	  	  "DeleteOnTermination": true,
+	  	  "VolumeSize": 10,
+	  	  "VolumeType": "gp2"
+	  	}
+	   }
+	],
+	"ImageId":"ami-00068cd7555f543d5",
+	"InstanceType": "t2.micro",
+	"SecurityGroups" : [ "default" ],
+	"Monitoring": {
+              "Enabled": true
+            },
+	"UserData": "IyEvdXNyL2Jpbi9iYXNoCnl1bSBpbnN0YWxsIGRvY2tlciAteQpzeXN0ZW1jdGwgZW5hYmxlIGRvY2tlcgpzeXN0ZW1jdGwgc3RhcnQgZG9ja2VyCmRvY2tlciBydW4gLWQgIFwKLWUgTVlTUUxfUk9PVF9QQVNTV09SRD1zZWNyZXQgXAotZSBNWVNRTF9EQVRBQkFTRT1ib29rc3RhY2sgXAotZSBNWVNRTF9VU0VSPWJvb2tzdGFjayBcCi1lIE1ZU1FMX1BBU1NXT1JEPXNlY3JldCBcCi1wIDMzMDY6MzMwNgogbXlzcWw6NS43LjIx",
+	"TagSpecifications": [
+		{
+			"ResourceType":"instance",
+			"Tags":[
+				{
+					"Key":"Environment",
+					"Value":"Learning"
+				},
+				{
+					"Key":"DB",
+					"Value":"MYSQL"
+				}
+			]
+		}
+	]
+}

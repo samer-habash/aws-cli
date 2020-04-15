@@ -1,0 +1,5 @@
+aws autoscaling create-auto-scaling-group \
+--auto-scaling-group-name bookstock  \
+--launch-template "LaunchTemplateName=bookstock" \
+--min-size 1 --max-size 3 --desired-capacity 2 \
+--availability-zones us-east-1a

@@ -1,0 +1,7 @@
+base64 --wrap=0 user-data-MYSQL.sh > user-data-MYSQL-base64.txt
+&&
+aws ec2 create-launch-template \
+--launch-template-name MYSQL \
+--version-description MYSQL_template \
+--launch-template-data file://launch-template-MYSQL.json \
+--region us-east-1

@@ -1,0 +1,7 @@
+base64 --wrap=0 user-data-bookstock.sh > user-data-bookstock-base64.txt
+&&
+aws ec2 create-launch-template \
+--launch-template-name bookstock \
+--version-description bookstock_template \
+--launch-template-data file://launch-template-bookstock.json \
+--region us-east-1
